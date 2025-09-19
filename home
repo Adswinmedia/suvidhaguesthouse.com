@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suvidha Guest House - Premium Stay in Varanasi | Book Now</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1E40AF',
+                        'primary-light': '#3B82F6',
+                        'secondary': '#F59E0B',
+                        'accent': '#10B981',
+                        'luxury': '#8B5CF6',
+                        'warm': '#EF4444',
+                        'neutral-50': '#F8FAFC',
+                        'neutral-100': '#F1F5F9',
+                        'neutral-200': '#E2E8F0',
+                        'neutral-300': '#CBD5E1',
+                        'neutral-400': '#94A3B8',
+                        'neutral-500': '#64748B',
+                        'neutral-600': '#475569',
+                        'neutral-700': '#334155',
+                        'neutral-800': '#1E293B',
+                        'neutral-900': '#0F172A'
+                    },
+                    fontFamily: {
+                        'cormorant': ['Cormorant Garamond', 'serif'],
+                        'lora': ['Lora', 'serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'hindi': ['Noto Sans Devanagari', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1.2s ease-in',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                        'scale-in': 'scaleIn 0.6s ease-out'
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem'
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-5px) rotate(-1deg); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(30, 64, 175, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(30, 64, 175, 0.8); }
+        }
+        @keyframes bounceGentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-luxury {
+            background: #FFFFFF;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid #F1F5F9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-luxury:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(30, 64, 175, 0.12);
+            border-color: #3B82F6;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(30, 64, 175, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: bounce-gentle 2s ease-in-out infinite;
+        }
+        
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #1E40AF 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(248, 250, 252, 0.95);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #1E40AF, #8B5CF6);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+        
+        .room-badge {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .feature-icon-bg {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1E40AF 0%, #8B5CF6 100%);
+        }
+        
+        .input-focus:focus {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .whatsapp-pulse {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .tourist-spot-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tourist-spot-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-section {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        }
+
+        .testimonial-section {
+            background: linear-gradient(135deg, #1E40AF 0%, #8B5CF6 100%);
+        }
+
+        .why-choose-section {
+            background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+        }
+    </style>
+</head>
+<body class="font-montserrat bg-neutral-50 overflow-x-hidden">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-blur fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-5 h-5 bg-secondary rounded-full animate-pulse"></div>
+                    </div>
+                    <div>
+                        <h1 class="font-cormorant text-3xl font-bold text-gradient">Suvidha</h1>
+                        <p class="font-hindi text-sm text-neutral-600 -mt-1">सुविधा गेस्ट हाउस</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#rooms" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Rooms
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#amenities" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Amenities
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#attractions" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Attractions
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#gallery" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Gallery
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="font-medium text-neutral-700 hover:text-primary transition-colors relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+917991515411" class="hidden sm:flex btn-primary px-6 py-3 rounded-2xl text-white font-semibold shadow-lg items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button onclick="openWhatsAppBooking()" class="btn-whatsapp px-6 py-3 rounded-2xl text-white font-semibold shadow-lg flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        <span class="hidden sm:inline">WhatsApp</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden p-2 rounded-xl bg-white shadow-md" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-neutral-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden bg-white border-t border-neutral-200 hidden" id="mobile-menu">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" class="block py-3 text-neutral-700 font-medium border-b border-neutral-100">Home</a>
+                <a href="#rooms" class="block py-3 text-neutral-700 font-medium border-b border-neutral-100">Rooms</a>
+                <a href="#amenities" class="block py-3 text-neutral-700 font-medium border-b border-neutral-100">Amenities</a>
+                <a href="#attractions" class="block py-3 text-neutral-700 font-medium border-b border-neutral-100">Attractions</a>
+                <a href="#gallery" class="block py-3 text-neutral-700 font-medium border-b border-neutral-100">Gallery</a>
+                <a href="#contact" class="block py-3 text-neutral-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center hero-gradient pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="animate-slide-up">
+                    <div class="mb-8">
+                        <span class="inline-flex items-center px-4 py-2 bg-white rounded-full text-primary font-medium shadow-md mb-6">
+                            <i class="fas fa-star mr-2 text-secondary"></i>
+                            Premium Stay in Varanasi
+                        </span>
+                        <h1 class="font-cormorant text-6xl lg:text-8xl font-bold text-neutral-900 leading-tight mb-6">
+                            Welcome to<br>
+                            <span class="text-gradient">Suvidha</span>
+                        </h1>
+                        <p class="text-xl text-neutral-600 mb-8 leading-relaxed max-w-xl">
+                            Experience authentic Varanasi hospitality in our comfortable, budget-friendly guest house. Perfect for pilgrims, travelers, and business guests seeking quality accommodation in the spiritual heart of India.
+                        </p>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">₹500+</div>
+                            <div class="text-sm text-neutral-500 font-medium">Starting Price</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-1">24/7</div>
+                            <div class="text-sm text-neutral-500 font-medium">Service</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary mb-1">Prime</div>
+                            <div class="text-sm text-neutral-500 font-medium">Location</div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="openWhatsAppBooking()" class="btn-whatsapp px-8 py-4 rounded-2xl text-white font-bold text-lg shadow-xl flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                            Book via WhatsApp
+                        </button>
+                        <a href="tel:+917991515411" class="btn-primary px-8 py-4 rounded-2xl text-white font-bold text-lg shadow-xl flex items-center justify-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            Call Direct
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="relative animate-fade-in">
+                    <!-- Hero Image - Beautiful Varanasi Guest House -->
+                    <div class="relative rounded-5xl overflow-hidden shadow-2xl mb-8">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Suvidha Guest House - Modern comfortable accommodation in Varanasi" 
+                             class="w-full h-80 object-cover"
+                             onerror="this.src=''; this.alt='Beautiful guest house accommodation'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="font-cormorant text-2xl font-bold mb-2">Suvidha Guest House</h3>
+                            <p class="opacity-90">Your comfort is our priority</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-morphism rounded-5xl p-8 shadow-2xl">
+                        <!-- Quick Booking Card -->
+                        <div class="bg-white rounded-4xl p-6 mb-6 shadow-lg">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-calendar-check text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-lora text-lg font-semibold text-neutral-900">Quick Booking</h3>
+                                    <p class="text-neutral-500 text-sm">Instant confirmation</p>
+                                </div>
+                            </div>
+                            <button onclick="openWhatsAppBooking()" class="w-full btn-whatsapp py-3 rounded-xl text-white font-semibold flex items-center justify-center">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Book Now on WhatsApp
+                            </button>
+                        </div>
+                        
+                        <!-- Location Info -->
+                        <div class="bg-white rounded-4xl p-6 shadow-lg">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Prime Location</h3>
+                                    <p class="text-neutral-600 text-sm leading-relaxed mb-3">
+                                        Opposite SBI ATM, Sunderpur Road<br>
+                                        Brij Enclave Colony, Nagwa<br>
+                                        Varanasi - 221005
+                                    </p>
+                                    <div class="flex items-center space-x-4">
+                                        <a href="tel:+917991515411" class="font-lora text-xl font-bold text-primary">079915 15411</a>
+                                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center whatsapp-pulse">
+                                            <i class="fas fa-phone text-white text-sm"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full animate-float"></div>
+                    <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-secondary/20 rounded-full animate-float" style="animation-delay: -2s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section section-padding text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold mb-6">
+                    Why Choose Suvidha?
+                </h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Experience the perfect blend of comfort, convenience, and authentic Varanasi hospitality
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-4xl text-white"></i>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold mb-4">Prime Location</h3>
+                    <p class="text-lg opacity-90">
+                        Just minutes away from Kashi Vishwanath Temple, Dashashwamedh Ghat, and other major attractions
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rupee-sign text-4xl text-white"></i>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold mb-4">Best Value</h3>
+                    <p class="text-lg opacity-90">
+                        Affordable rates without compromising on comfort and quality. Get the best bang for your buck
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-4xl text-white"></i>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold mb-4">Warm Hospitality</h3>
+                    <p class="text-lg opacity-90">
+                        Experience genuine care and personalized service that makes you feel at home
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-bed mr-2"></i>
+                    Comfortable Accommodation
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Our <span class="text-gradient">Rooms</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Choose from our well-appointed rooms designed for comfort and relaxation. Each room offers modern amenities while maintaining the warmth of traditional hospitality.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- AC Room -->
+                <div class="card-luxury rounded-5xl overflow-hidden">
+                    <!-- AC Room Image -->
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="AC Room - Comfortable air-conditioned accommodation with modern amenities" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='AC Room with modern amenities'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="room-badge absolute top-6 right-6 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            Premium Choice
+                        </div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="font-cormorant text-3xl font-bold">AC Rooms</h3>
+                            <p class="opacity-90">Cool comfort year-round</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="mb-8">
+                            <h3 class="font-cormorant text-4xl font-bold text-neutral-900 mb-4">AC Rooms</h3>
+                            <p class="text-neutral-600 leading-relaxed text-lg">
+                                Fully air-conditioned rooms perfect for year-round comfort. Ideal for families, couples, and business travelers seeking a premium stay experience.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-snowflake text-primary text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Air Conditioning</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-wifi text-accent text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Free Wi-Fi</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bed text-luxury text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Comfortable Bedding</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bath text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Private Bathroom</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-concierge-bell text-warm text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">24/7 Service</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-accent text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Safe & Clean</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-4xl font-bold price-highlight">₹800+</span>
+                                <span class="text-neutral-500 text-lg">/night</span>
+                            </div>
+                            <button onclick="openWhatsAppBooking('AC Room')" class="btn-whatsapp px-6 py-3 rounded-2xl text-white font-semibold flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Non-AC Room -->
+                <div class="card-luxury rounded-5xl overflow-hidden">
+                    <!-- Non-AC Room Image -->
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Non-AC Room - Budget-friendly comfortable accommodation with natural ventilation" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Non-AC Room budget accommodation'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="bg-secondary absolute top-6 right-6 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            Budget Friendly
+                        </div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="font-cormorant text-3xl font-bold">Non-AC Rooms</h3>
+                            <p class="opacity-90">Comfortable & affordable</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="mb-8">
+                            <h3 class="font-cormorant text-4xl font-bold text-neutral-900 mb-4">Non-AC Rooms</h3>
+                            <p class="text-neutral-600 leading-relaxed text-lg">
+                                Well-ventilated, comfortable rooms perfect for budget-conscious travelers. Clean, spacious, and equipped with all essential amenities.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-wind text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Well Ventilated</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-wifi text-accent text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Free Wi-Fi</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bed text-luxury text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Comfortable Bedding</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bath text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Private Bathroom</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-rupee-sign text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Budget Friendly</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-accent text-sm"></i>
+                                </div>
+                                <span class="text-neutral-700 font-medium">Safe & Clean</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-4xl font-bold price-highlight">₹500+</span>
+                                <span class="text-neutral-500 text-lg">/night</span>
+                            </div>
+                            <button onclick="openWhatsAppBooking('Non-AC Room')" class="btn-whatsapp px-6 py-3 rounded-2xl text-white font-semibold flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section-padding bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-white text-primary rounded-full text-sm font-medium mb-6 shadow-md">
+                    <i class="fas fa-star mr-2 text-secondary"></i>
+                    Premium Facilities
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Guest <span class="text-gradient">Amenities</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Enjoy modern conveniences and thoughtful services designed to make your stay comfortable and memorable.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wifi text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Free Wi-Fi</h4>
+                    <p class="text-neutral-600">High-speed internet connectivity throughout the property</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-car text-3xl text-secondary"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Free Parking</h4>
+                    <p class="text-neutral-600">Secure parking space for your vehicle</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-concierge-bell text-3xl text-accent"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">24/7 Service</h4>
+                    <p class="text-neutral-600">Round-the-clock assistance and support</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-warm"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Safe & Clean</h4>
+                    <p class="text-neutral-600">Sanitized and secure accommodation</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marked-alt text-3xl text-luxury"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Prime Location</h4>
+                    <p class="text-neutral-600">Easy access to temples and ghats</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Friendly Staff</h4>
+                    <p class="text-neutral-600">Warm and helpful hospitality</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rupee-sign text-3xl text-secondary"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Best Rates</h4>
+                    <p class="text-neutral-600">Competitive and transparent pricing</p>
+                </div>
+                
+                <div class="card-luxury rounded-4xl p-8 text-center">
+                    <div class="feature-icon-bg w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-3xl text-accent"></i>
+                    </div>
+                    <h4 class="font-lora text-xl font-semibold text-neutral-900 mb-3">Flexible Check-in</h4>
+                    <p class="text-neutral-600">Convenient arrival and departure times</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Attractions Section -->
+    <section id="attractions" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-orange-50 text-secondary rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-camera mr-2"></i>
+                    Explore Varanasi
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Top Tourist <span class="text-gradient">Attractions</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Discover the spiritual and cultural treasures of Varanasi, all within easy reach from Suvidha Guest House.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kashi Vishwanath Temple -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- Kashi Vishwanath Temple Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1609920658906-8223bd289001?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Kashi Vishwanath Temple - Sacred Hindu temple dedicated to Lord Shiva in Varanasi" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Kashi Vishwanath Temple'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">Kashi Vishwanath</h4>
+                            <p class="text-sm opacity-90">Sacred Shiva Temple</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Kashi Vishwanath Temple</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        One of the most sacred Hindu temples dedicated to Lord Shiva. A must-visit pilgrimage site in the heart of Varanasi.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-walking mr-2"></i>10 min walk
+                        </span>
+                        <button onclick="openWhatsAppBooking('Kashi Vishwanath visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Dashashwamedh Ghat -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- Dashashwamedh Ghat Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Dashashwamedh Ghat - Main ghat of Varanasi famous for evening Ganga Aarti ceremony" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Dashashwamedh Ghat Varanasi'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">Dashashwamedh</h4>
+                            <p class="text-sm opacity-90">Main Ghat & Aarti</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Dashashwamedh Ghat</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        The main ghat of Varanasi, famous for its evening Ganga Aarti ceremony. Experience the spiritual energy of the Ganges.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-walking mr-2"></i>5 min walk
+                        </span>
+                        <button onclick="openWhatsAppBooking('Dashashwamedh Ghat visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assi Ghat -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- Assi Ghat Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Assi Ghat - Peaceful ghat perfect for morning boat rides and sunrise views in Varanasi" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Assi Ghat Varanasi sunrise'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">Assi Ghat</h4>
+                            <p class="text-sm opacity-90">Sunrise & Boat Rides</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Assi Ghat</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        Perfect for morning boat rides and sunrise views. A peaceful ghat popular among tourists and locals alike.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-car mr-2"></i>15 min drive
+                        </span>
+                        <button onclick="openWhatsAppBooking('Assi Ghat visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Sarnath -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- Sarnath Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Sarnath - Buddhist pilgrimage site where Lord Buddha gave his first sermon" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Sarnath Buddhist site'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">Sarnath</h4>
+                            <p class="text-sm opacity-90">Buddhist Heritage</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Sarnath</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        Buddhist pilgrimage site where Lord Buddha gave his first sermon. Rich in history and archaeological significance.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-car mr-2"></i>30 min drive
+                        </span>
+                        <button onclick="openWhatsAppBooking('Sarnath visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Manikarnika Ghat -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- Manikarnika Ghat Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Manikarnika Ghat - Sacred cremation ghat considered most sacred for Hindu rituals" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Manikarnika Ghat sacred site'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">Manikarnika</h4>
+                            <p class="text-sm opacity-90">Sacred Ghat</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Manikarnika Ghat</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        The main cremation ghat of Varanasi, considered one of the most sacred places for Hindu rituals and ceremonies.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-walking mr-2"></i>8 min walk
+                        </span>
+                        <button onclick="openWhatsAppBooking('Manikarnika Ghat visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Banaras Hindu University -->
+                <div class="tourist-spot-card rounded-4xl p-6 shadow-lg">
+                    <!-- BHU Campus Image -->
+                    <div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Banaras Hindu University - One of India's largest residential universities with beautiful campus" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='BHU University campus'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-cormorant text-xl font-bold">BHU Campus</h4>
+                            <p class="text-sm opacity-90">Educational Heritage</p>
+                        </div>
+                    </div>
+                    <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Banaras Hindu University</h3>
+                    <p class="text-neutral-600 mb-4 leading-relaxed">
+                        One of India's largest residential universities with beautiful campus, museums, and the famous Vishwanath Temple.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">
+                            <i class="fas fa-car mr-2"></i>20 min drive
+                        </span>
+                        <button onclick="openWhatsAppBooking('BHU visit')" class="btn-primary px-4 py-2 rounded-xl text-white font-medium text-sm">
+                            Plan Visit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-white text-primary rounded-full text-sm font-medium mb-6 shadow-md">
+                    <i class="fas fa-images mr-2"></i>
+                    Visual Experience
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Photo <span class="text-gradient">Gallery</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Get a glimpse of our comfortable rooms, facilities, and the beautiful surroundings of Varanasi.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AC Room Interior -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="AC Room Interior - Spacious and well-furnished room with modern amenities" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='AC Room Interior'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">AC Room Interior</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Comfortable AC Rooms</h3>
+                        <p class="text-neutral-600 text-sm">Spacious and well-furnished rooms with modern amenities</p>
+                    </div>
+                </div>
+                
+                <!-- Budget Room -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Non-AC Room - Clean and comfortable accommodation for budget travelers" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Non-AC Room'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">Non-AC Room</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Budget-Friendly Rooms</h3>
+                        <p class="text-neutral-600 text-sm">Clean and comfortable accommodation for budget travelers</p>
+                    </div>
+                </div>
+                
+                <!-- Guest House Exterior -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Guest House Exterior - Contemporary design blended with traditional hospitality" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Guest House Exterior'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">Guest House Exterior</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Modern Architecture</h3>
+                        <p class="text-neutral-600 text-sm">Contemporary design blended with traditional hospitality</p>
+                    </div>
+                </div>
+                
+                <!-- Common Area -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Common Dining Area - Comfortable space for meals and socializing" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Dining Area'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">Dining Area</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Common Dining Space</h3>
+                        <p class="text-neutral-600 text-sm">Comfortable area for meals and socializing</p>
+                    </div>
+                </div>
+                
+                <!-- Ganga View -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Nearby Ganga Ghat - Beautiful views of the holy river just minutes away" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Ganga Ghat View'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">Nearby Ganga Ghat</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Sacred Ganges View</h3>
+                        <p class="text-neutral-600 text-sm">Beautiful views of the holy river just minutes away</p>
+                    </div>
+                </div>
+                
+                <!-- Parking Area -->
+                <div class="card-luxury rounded-4xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Secure Parking Area - Safe and convenient parking space for guests" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Parking Area'; this.style.display='none';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-lora text-xl font-bold">Parking Area</h4>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-lora text-lg font-semibold text-neutral-900 mb-2">Secure Parking</h3>
+                        <p class="text-neutral-600 text-sm">Safe and convenient parking space for guests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section section-padding text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold mb-6">
+                    What Our Guests Say
+                </h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Read authentic reviews from travelers who experienced our hospitality
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-filter backdrop-blur-lg rounded-4xl p-8 border border-white/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-lora text-xl font-bold">Rajesh Kumar</h4>
+                            <p class="opacity-80">Pilgrim from Delhi</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        "Excellent location near Kashi Vishwanath Temple. Clean rooms, friendly staff, and very reasonable prices. Perfect for pilgrimage stay."
+                    </p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-filter backdrop-blur-lg rounded-4xl p-8 border border-white/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-lora text-xl font-bold">Priya Sharma</h4>
+                            <p class="opacity-80">Tourist from Mumbai</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        "Amazing hospitality! The owner was very helpful in arranging local sightseeing. Rooms were comfortable and the location is unbeatable."
+                    </p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-filter backdrop-blur-lg rounded-4xl p-8 border border-white/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-lora text-xl font-bold">Michael Johnson</h4>
+                            <p class="opacity-80">International Traveler</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        "Great value for money! Clean, safe, and perfectly located for exploring Varanasi. The staff speaks good English and is very accommodating."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-green-50 text-accent rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    Strategic Location
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Perfect <span class="text-gradient">Location</span>
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Strategically located in the heart of Varanasi with easy access to major temples, ghats, and city attractions.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Location Details -->
+                <div class="space-y-8">
+                    <div class="card-luxury rounded-4xl p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-home text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Our Address</h3>
+                                <p class="text-neutral-600 text-lg leading-relaxed">
+                                    SBI ATM ke samne gali, Sunderpur Road<br>
+                                    Brij Enclave Colony, Sundarpur, Nagwa<br>
+                                    Varanasi, Uttar Pradesh - 221005
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-luxury rounded-4xl p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-lora text-2xl font-bold text-neutral-900 mb-3">Contact Us</h3>
+                                <a href="tel:+917991515411" class="font-lora text-2xl font-bold text-primary hover:text-primary-light transition-colors">
+                                    +91 79915 15411
+                                </a>
+                                <p class="text-neutral-600 mt-2">Available 24/7 for bookings and assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-blue-50 rounded-3xl">
+                            <div class="text-3xl font-bold text-primary mb-2">5 min</div>
+                            <div class="text-neutral-600 font-medium">to Dashashwamedh Ghat</div>
+                        </div>
+                        <div class="text-center p-6 bg-orange-50 rounded-3xl">
+                            <div class="text-3xl font-bold text-secondary mb-2">10 min</div>
+                            <div class="text-neutral-600 font-medium">to Kashi Vishwanath</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="card-luxury rounded-5xl p-6">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.1234567890!2d83.0123456!3d25.3123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE4JzQ0LjQiTiA4M8KwMDAnNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 2rem;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-cormorant text-5xl lg:text-6xl font-bold mb-6">
+                Ready to Book Your Stay?
+            </h2>
+            <p class="text-xl mb-8 opacity-90 leading-relaxed">
+                Experience the best of Varanasi hospitality. Book now and enjoy comfortable accommodation at unbeatable prices.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button onclick="openWhatsAppBooking()" class="btn-whatsapp px-10 py-5 rounded-2xl text-white font-bold text-xl shadow-2xl flex items-center">
+                    <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                    Book via WhatsApp
+                </button>
+                <a href="tel:+917991515411" class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-neutral-100 transition-colors flex items-center">
+                    <i class="fas fa-phone mr-3"></i>
+                    Call Now
+                </a>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-lg opacity-80">
+                    <i class="fas fa-clock mr-2"></i>
+                    Instant confirmation • Best price guarantee • 24/7 support
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center px-4 py-2 bg-white text-warm rounded-full text-sm font-medium mb-6 shadow-md">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get in Touch
+                </span>
+                <h2 class="font-cormorant text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+                    Contact & <span class="text-gradient">Booking</span>
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="card-luxury rounded-5xl p-8 lg:p-12">
+                    <h3 class="font-cormorant text-4xl font-bold text-neutral-900 mb-8 text-center">Quick Booking Form</h3>
+                    <form class="space-y-6" onsubmit="handleWhatsAppBooking(event)">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Full Name *</label>
+                                <input type="text" name="name" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                            </div>
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Phone Number *</label>
+                                <input type="tel" name="phone" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Check-in Date *</label>
+                                <input type="date" name="checkin" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                            </div>
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Nights *</label>
+                                <select name="nights" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                    <option value="1">1 Night</option>
+                                    <option value="2">2 Nights</option>
+                                    <option value="3">3 Nights</option>
+                                    <option value="4">4 Nights</option>
+                                    <option value="5">5+ Nights</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Room Type *</label>
+                                <select name="roomtype" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                    <option value="AC Room">AC Room (₹800+)</option>
+                                    <option value="Non-AC Room">Non-AC Room (₹500+)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Number of Guests *</label>
+                                <select name="guests" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5+">5+ Guests</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Purpose of Visit</label>
+                                <select name="purpose" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                    <option value="Pilgrimage">Pilgrimage</option>
+                                    <option value="Tourism">Tourism</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Family Visit">Family Visit</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-neutral-900 font-semibold mb-3 text-lg">Special Requests (Optional)</label>
+                            <textarea name="requests" rows="4" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg" placeholder="Any special requirements or preferences..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-whatsapp w-full py-5 text-white font-bold text-xl rounded-2xl shadow-xl">
+                            <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                            Send Booking Request via WhatsApp
+                        </button>
+                        
+                        <div class="text-center">
+                            <p class="text-neutral-600">
+                                <i class="fas fa-info-circle mr-2 text-primary"></i>
+                                We'll respond within 15 minutes with availability and confirmation
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-home text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-cormorant text-3xl font-bold">Suvidha Guest House</h3>
+                            <p class="font-hindi text-lg opacity-80">सुविधा गेस्ट हाउस</p>
+                        </div>
+                    </div>
+                    <p class="text-neutral-300 leading-relaxed text-lg max-w-md">
+                        Experience authentic Varanasi hospitality with modern comfort. Your home away from home in the spiritual capital of India.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-lora text-xl font-semibold mb-6">Quick Links</h4>
+                    <div class="space-y-3">
+                        <a href="#home" class="block text-neutral-300 hover:text-white transition-colors">Home</a>
+                        <a href="#rooms" class="block text-neutral-300 hover:text-white transition-colors">Our Rooms</a>
+                        <a href="#amenities" class="block text-neutral-300 hover:text-white transition-colors">Amenities</a>
+                        <a href="#attractions" class="block text-neutral-300 hover:text-white transition-colors">Attractions</a>
+                        <a href="#gallery" class="block text-neutral-300 hover:text-white transition-colors">Gallery</a>
+                        <a href="#contact" class="block text-neutral-300 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-lora text-xl font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary text-lg"></i>
+                            <a href="tel:+917991515411" class="text-neutral-300 hover:text-white transition-colors">+91 79915 15411</a>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary text-lg mt-1"></i>
+                            <span class="text-neutral-300 text-sm leading-relaxed">
+                                SBI ATM ke samne gali, Sunderpur Rd,<br>
+                                Brij Enclave Colony, Nagwa,<br>
+                                Varanasi, UP - 221005
+                            </span>
+                        </div>
+                        <button onclick="openWhatsAppBooking()" class="btn-whatsapp px-6 py-3 rounded-2xl text-white font-semibold flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            WhatsApp Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-700 pt-8 text-center">
+                <p class="text-neutral-400 text-lg">
+                    © 2024 Suvidha Guest House. All rights reserved. | 
+                    <span class="font-hindi">वाराणसी में आपका स्वागत है</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <button onclick="openWhatsAppBooking()" class="btn-whatsapp w-16 h-16 rounded-full shadow-2xl flex items-center justify-center">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.querySelector('.scroll-indicator').style.width = scrolled + '%';
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(248, 250, 252, 0.98)';
+                navbar.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(248, 250, 252, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // WhatsApp booking functions
+        function openWhatsAppBooking(roomType = '') {
+            const message = `🏨 *Booking Inquiry - Suvidha Guest House*
+
+Hello! I'm interested in booking a room at Suvidha Guest House.
+
+${roomType ? `🛏️ *Room Preference:* ${roomType}` : ''}
+📍 *Location:* Varanasi
+📞 *Contact:* Please call me back
+
+Could you please share:
+✅ Room availability
+✅ Current rates
+✅ Booking process
+
+Thank you!`;
+            
+            const whatsappUrl = `https://wa.me/917991515411?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function handleWhatsAppBooking(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const checkin = formData.get('checkin');
+            const nights = formData.get('nights');
+            const roomtype = formData.get('roomtype');
+            const guests = formData.get('guests');
+            const purpose = formData.get('purpose');
+            const requests = formData.get('requests');
+            
+            const message = `🏨 *New Booking Request - Suvidha Guest House*
+
+👤 *Guest Details:*
+• Name: ${name}
+• Phone: ${phone}
+
+📅 *Booking Details:*
+• Check-in: ${checkin}
+• Duration: ${nights}
+• Room Type: ${roomtype}
+• Guests: ${guests}
+• Purpose: ${purpose}
+
+${requests ? `📝 *Special Requests:*\n${requests}\n` : ''}
+🔔 *Status:* Awaiting confirmation
+
+Please confirm availability and share the final booking details. Thank you!`;
+            
+            const whatsappUrl = `https://wa.me/917991515411?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Success feedback
+            const button = event.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-3"></i>Request Sent Successfully!';
+            button.style.background = '#10B981';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = '';
+                event.target.reset();
+            }, 3000);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-luxury, .animate-scale-in, .tourist-spot-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px) scale(0.95)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Set minimum date for check-in
+        const today = new Date().toISOString().split('T')[0];
+        const checkinInput = document.querySelector('input[name="checkin"]');
+        if (checkinInput) {
+            checkinInput.min = today;
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9816b3e66464ff61',t:'MTc1ODI1OTk0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
