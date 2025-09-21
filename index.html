@@ -204,6 +204,43 @@
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
         
+        /* Mobile form optimizations */
+        @media (max-width: 640px) {
+            .input-focus, select {
+                font-size: 16px !important; /* Prevents zoom on iOS */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            
+            select {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 12px center;
+                background-size: 16px;
+                padding-right: 40px;
+            }
+            
+            .form-container {
+                padding: 1rem !important;
+            }
+        }
+        
+        /* Touch-friendly buttons */
+        .btn-touch {
+            min-height: 48px;
+            min-width: 48px;
+        }
+        
+        /* Improved select styling */
+        select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+        
         .whatsapp-pulse {
             animation: pulse-glow 2s ease-in-out infinite;
         }
@@ -1255,25 +1292,26 @@
                 <div class="card-luxury rounded-5xl p-8 lg:p-12">
                     <h3 class="font-cormorant text-4xl font-bold text-neutral-900 mb-8 text-center">Quick Booking Form</h3>
                     <form class="space-y-6" onsubmit="handleWhatsAppBooking(event)">
-                        <div class="grid md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Full Name *</label>
-                                <input type="text" name="name" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Full Name *</label>
+                                <input type="text" name="name" required class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px]" placeholder="Enter your full name">
                             </div>
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Phone Number *</label>
-                                <input type="tel" name="phone" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Phone Number *</label>
+                                <input type="tel" name="phone" required class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px]" placeholder="Enter your phone number">
                             </div>
                         </div>
                         
-                        <div class="grid md:grid-cols-3 gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Check-in Date *</label>
-                                <input type="date" name="checkin" required class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Check-in Date *</label>
+                                <input type="date" name="checkin" required class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px]">
                             </div>
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Nights *</label>
-                                <select name="nights" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Nights *</label>
+                                <select name="nights" class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px] appearance-none cursor-pointer">
+                                    <option value="">Select nights</option>
                                     <option value="1">1 Night</option>
                                     <option value="2">2 Nights</option>
                                     <option value="3">3 Nights</option>
@@ -1281,19 +1319,21 @@
                                     <option value="5">5+ Nights</option>
                                 </select>
                             </div>
-                            <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Room Type *</label>
-                                <select name="roomtype" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                            <div class="sm:col-span-2 lg:col-span-1">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Room Type *</label>
+                                <select name="roomtype" class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px] appearance-none cursor-pointer">
+                                    <option value="">Select room type</option>
                                     <option value="AC Room">AC Room (₹800+)</option>
                                     <option value="Non-AC Room">Non-AC Room (₹500+)</option>
                                 </select>
                             </div>
                         </div>
                         
-                        <div class="grid md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Number of Guests *</label>
-                                <select name="guests" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Number of Guests *</label>
+                                <select name="guests" class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px] appearance-none cursor-pointer">
+                                    <option value="">Select guests</option>
                                     <option value="1">1 Guest</option>
                                     <option value="2">2 Guests</option>
                                     <option value="3">3 Guests</option>
@@ -1302,8 +1342,9 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-neutral-900 font-semibold mb-3 text-lg">Purpose of Visit</label>
-                                <select name="purpose" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg">
+                                <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Purpose of Visit</label>
+                                <select name="purpose" class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg min-h-[48px] appearance-none cursor-pointer">
+                                    <option value="">Select purpose</option>
                                     <option value="Pilgrimage">Pilgrimage</option>
                                     <option value="Tourism">Tourism</option>
                                     <option value="Business">Business</option>
@@ -1314,17 +1355,17 @@
                         </div>
                         
                         <div>
-                            <label class="block text-neutral-900 font-semibold mb-3 text-lg">Special Requests (Optional)</label>
-                            <textarea name="requests" rows="4" class="input-focus w-full px-6 py-4 border-2 border-neutral-200 rounded-2xl focus:outline-none transition-all bg-white text-lg" placeholder="Any special requirements or preferences..."></textarea>
+                            <label class="block text-neutral-900 font-semibold mb-2 text-base sm:text-lg">Special Requests (Optional)</label>
+                            <textarea name="requests" rows="4" class="input-focus w-full px-4 sm:px-6 py-4 sm:py-5 border-2 border-neutral-200 rounded-xl sm:rounded-2xl focus:outline-none transition-all bg-white text-base sm:text-lg resize-none" placeholder="Any special requirements or preferences..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-whatsapp w-full py-5 text-white font-bold text-xl rounded-2xl shadow-xl">
-                            <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                        <button type="submit" class="btn-whatsapp w-full py-4 sm:py-5 text-white font-bold text-lg sm:text-xl rounded-xl sm:rounded-2xl shadow-xl min-h-[56px] active:scale-95 transition-transform">
+                            <i class="fab fa-whatsapp mr-2 sm:mr-3 text-xl sm:text-2xl"></i>
                             Send Booking Request via WhatsApp
                         </button>
                         
                         <div class="text-center">
-                            <p class="text-neutral-600">
+                            <p class="text-neutral-600 text-sm sm:text-base">
                                 <i class="fas fa-info-circle mr-2 text-primary"></i>
                                 We'll respond within 15 minutes with availability and confirmation
                             </p>
@@ -1392,14 +1433,134 @@
                 </div>
             </div>
             
-            <div class="border-t border-neutral-700 pt-8 text-center">
-                <p class="text-neutral-400 text-lg">
-                    © 2024 Suvidha Guest House. All rights reserved. | 
-                    <span class="font-hindi">वाराणसी में आपका स्वागत है</span>
-                </p>
+            <div class="border-t border-neutral-700 pt-8">
+                <div class="text-center mb-4">
+                    <p class="text-neutral-400 text-lg">
+                        © 2024 Suvidha Guest House. All rights reserved. | 
+                        <span class="font-hindi">वाराणसी में आपका स्वागत है</span>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <p class="text-neutral-500 text-sm">
+                        Designed & Developed by 
+                        <a href="https://adswinmedia.in/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors font-semibold">
+                            AdsWin Media
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Smart Popup Form -->
+    <div id="smartPopup" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-500">
+        <div class="bg-white rounded-3xl sm:rounded-5xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-all duration-500" id="popupContent">
+            <!-- Close Button -->
+            <button onclick="closeSmartPopup()" class="absolute top-4 right-4 w-10 h-10 bg-neutral-100 hover:bg-neutral-200 rounded-full flex items-center justify-center transition-colors z-10">
+                <i class="fas fa-times text-neutral-600"></i>
+            </button>
+            
+            <!-- Popup Header -->
+            <div class="bg-gradient-to-r from-primary to-luxury text-white p-6 sm:p-8 rounded-t-3xl sm:rounded-t-5xl text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-black/10"></div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                        <i class="fas fa-home text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="font-cormorant text-2xl sm:text-3xl font-bold mb-2">Special Offer!</h3>
+                    <p class="text-base sm:text-lg opacity-90">Get instant booking confirmation</p>
+                </div>
+            </div>
+            
+            <!-- Popup Content -->
+            <div class="p-6 sm:p-8 form-container">
+                <div class="text-center mb-6">
+                    <h4 class="font-lora text-xl sm:text-2xl font-bold text-neutral-900 mb-3">Book Now & Save!</h4>
+                    <p class="text-neutral-600 leading-relaxed text-sm sm:text-base">
+                        Get the best rates and instant confirmation for your Varanasi stay. Limited time offer!
+                    </p>
+                </div>
+                
+                <!-- Quick Benefits -->
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-green-600 text-xs"></i>
+                        </div>
+                        <span class="text-neutral-700 text-sm sm:text-base">✨ Best Price Guarantee</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-green-600 text-xs"></i>
+                        </div>
+                        <span class="text-neutral-700 text-sm sm:text-base">⚡ Instant Confirmation</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-green-600 text-xs"></i>
+                        </div>
+                        <span class="text-neutral-700 text-sm sm:text-base">🏨 Prime Location Near Temples</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Inquiry Form -->
+                <form onsubmit="handlePopupInquiry(event)" class="space-y-4">
+                    <div>
+                        <input type="text" name="popup_name" placeholder="Your Name" required 
+                               class="w-full px-4 py-4 border-2 border-neutral-200 rounded-xl focus:border-primary focus:outline-none transition-colors text-base min-h-[48px]">
+                    </div>
+                    <div>
+                        <input type="tel" name="popup_phone" placeholder="Phone Number" required 
+                               class="w-full px-4 py-4 border-2 border-neutral-200 rounded-xl focus:border-primary focus:outline-none transition-colors text-base min-h-[48px]">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="date" name="popup_checkin" required 
+                               class="px-4 py-4 border-2 border-neutral-200 rounded-xl focus:border-primary focus:outline-none transition-colors text-base min-h-[48px]">
+                        <select name="popup_nights" required 
+                                class="px-4 py-4 border-2 border-neutral-200 rounded-xl focus:border-primary focus:outline-none transition-colors text-base min-h-[48px] appearance-none cursor-pointer">
+                            <option value="">Select nights</option>
+                            <option value="1">1 Night</option>
+                            <option value="2">2 Nights</option>
+                            <option value="3">3 Nights</option>
+                            <option value="4">4+ Nights</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full btn-whatsapp py-4 rounded-xl text-white font-bold flex items-center justify-center min-h-[52px] active:scale-95 transition-transform text-base">
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                        Get Instant Quote on WhatsApp
+                    </button>
+                </form>
+                
+                <!-- Alternative Actions -->
+                <div class="mt-4 text-center">
+                    <button onclick="closeSmartPopup(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" 
+                            class="text-primary hover:text-primary-light font-semibold text-xs sm:text-sm btn-touch">
+                        Or fill detailed form below
+                    </button>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-6 pt-6 border-t border-neutral-100">
+                    <div class="flex items-center justify-center space-x-4 sm:space-x-6 text-xs sm:text-sm text-neutral-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-green-500 mr-1"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-1"></i>
+                            <span class="hidden sm:inline">24/7 Support</span>
+                            <span class="sm:hidden">24/7</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <span>5★ Rated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating WhatsApp Button -->
     <div class="floating-whatsapp">
@@ -1548,6 +1709,157 @@ Please confirm availability and share the final booking details. Thank you!`;
         if (checkinInput) {
             checkinInput.min = today;
         }
+
+        // Set minimum date for popup check-in
+        const popupCheckinInput = document.querySelector('input[name="popup_checkin"]');
+        if (popupCheckinInput) {
+            popupCheckinInput.min = today;
+        }
+
+        // Smart Popup Functions
+        let popupShown = false;
+        let popupTimer = null;
+
+        function showSmartPopup() {
+            if (popupShown) return;
+            
+            const popup = document.getElementById('smartPopup');
+            const content = document.getElementById('popupContent');
+            
+            popup.classList.remove('invisible');
+            popup.style.opacity = '1';
+            content.style.transform = 'scale(1)';
+            
+            popupShown = true;
+            
+            // Store in localStorage to prevent showing again for 24 hours
+            localStorage.setItem('popupShown', Date.now().toString());
+        }
+
+        function closeSmartPopup() {
+            const popup = document.getElementById('smartPopup');
+            const content = document.getElementById('popupContent');
+            
+            popup.style.opacity = '0';
+            content.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                popup.classList.add('invisible');
+            }, 500);
+        }
+
+        function handlePopupInquiry(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            
+            const name = formData.get('popup_name');
+            const phone = formData.get('popup_phone');
+            const checkin = formData.get('popup_checkin');
+            const nights = formData.get('popup_nights');
+            
+            const message = `🏨 *Quick Booking Inquiry - Suvidha Guest House*
+
+👤 *Guest:* ${name}
+📞 *Phone:* ${phone}
+📅 *Check-in:* ${checkin}
+🌙 *Nights:* ${nights}
+
+💰 *Request:* Please share best rates and availability
+
+⚡ *Priority:* Quick response needed
+🎯 *Source:* Website popup form
+
+Thank you!`;
+            
+            const whatsappUrl = `https://wa.me/917991515411?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Success feedback
+            const button = event.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Request Sent!';
+            button.style.background = '#10B981';
+            
+            setTimeout(() => {
+                closeSmartPopup();
+                button.innerHTML = originalText;
+                button.style.background = '';
+                event.target.reset();
+            }, 2000);
+        }
+
+        // Smart Popup Triggers
+        function initSmartPopup() {
+            // Check if popup was shown in last 24 hours
+            const lastShown = localStorage.getItem('popupShown');
+            if (lastShown && (Date.now() - parseInt(lastShown)) < 24 * 60 * 60 * 1000) {
+                return; // Don't show if shown in last 24 hours
+            }
+
+            // Trigger 1: Time-based (after 30 seconds)
+            setTimeout(() => {
+                if (!popupShown) showSmartPopup();
+            }, 30000);
+
+            // Trigger 2: Scroll-based (after scrolling 50% of page)
+            let scrollTriggered = false;
+            window.addEventListener('scroll', () => {
+                if (scrollTriggered || popupShown) return;
+                
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent > 50) {
+                    scrollTriggered = true;
+                    setTimeout(() => {
+                        if (!popupShown) showSmartPopup();
+                    }, 2000);
+                }
+            });
+
+            // Trigger 3: Exit intent (mouse leaving viewport)
+            let exitIntentTriggered = false;
+            document.addEventListener('mouseleave', (e) => {
+                if (exitIntentTriggered || popupShown) return;
+                if (e.clientY <= 0) {
+                    exitIntentTriggered = true;
+                    showSmartPopup();
+                }
+            });
+
+            // Trigger 4: Multiple page interactions
+            let interactionCount = 0;
+            const trackInteraction = () => {
+                interactionCount++;
+                if (interactionCount >= 3 && !popupShown) {
+                    setTimeout(() => {
+                        if (!popupShown) showSmartPopup();
+                    }, 1000);
+                }
+            };
+
+            // Track clicks on key elements
+            document.querySelectorAll('a[href^="#"], .card-luxury, .btn-primary').forEach(el => {
+                el.addEventListener('click', trackInteraction);
+            });
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('smartPopup').addEventListener('click', (e) => {
+            if (e.target.id === 'smartPopup') {
+                closeSmartPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('smartPopup').classList.contains('invisible')) {
+                closeSmartPopup();
+            }
+        });
+
+        // Initialize smart popup system
+        document.addEventListener('DOMContentLoaded', () => {
+            initSmartPopup();
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9817971f5149c1ac',t:'MTc1ODI2OTI1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9827e1d0451bcbb5',t:'MTc1ODQ0MDA4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
